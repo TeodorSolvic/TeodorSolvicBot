@@ -31,13 +31,15 @@ class BotCore
         $this->requestUrl = static::API_URL . $botApiKey;
 
         $this->setupOutputData();
+    }
 
+    public function produceTestMessage()
+    {
         $this->sendMessage(
             $this->chatId,
             'You tell: "' . $this->message . '"'
         );
     }
-
 
     /**
      * @param $chatId
