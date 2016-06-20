@@ -47,7 +47,7 @@ class BotCore
      */
     private function sendMessage($chatId, $message)
     {
-        file_get_contents($GLOBALS['api'] . '/sendMessage?chat_id=' . $chatId . '&text=' . urlencode($message));
+        file_get_contents($this->requestUrl . '/sendMessage?chat_id=' . $chatId . '&text=' . urlencode($message));
     }
 
     private function setupOutputData()
